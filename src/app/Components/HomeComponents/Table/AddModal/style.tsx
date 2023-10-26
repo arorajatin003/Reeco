@@ -43,10 +43,7 @@ export const InputField = styled.div`
     align-items: center;
     justify-content: space-between;
     width: 200px;
-    
-    &:nth-child(2){
-        margin:1.5rem 0
-    }
+    padding: 0.5rem 0;
 `
 export const Label = styled.div`
     

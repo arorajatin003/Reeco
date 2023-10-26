@@ -56,7 +56,7 @@ const Row = ({
             </Element>
             <Element style={{width:"10%"}}>{ele.brand}</Element>
             <Element style={{width:"10%"}}>&#8377;{ele.price}</Element>
-            <Element style={{width:"10%"}}>10 * &#8377;{ele.quantity}</Element>
+            <Element style={{width:"10%"}}>{ele.quantity}</Element>
             <Element style={{width:"10%"}}>&#8377;{ele.price * ele.quantity}</Element>
             <Element style={{width:"20%", color:"#000000"}}>
                 <div style={{padding:"0.5rem 1rem", borderRadius:"100px", backgroundColor:getBachgroundColor(ele.status), width:"fit-content"}}>
@@ -65,8 +65,8 @@ const Row = ({
             </Element>
             <Element style={{width:"5%", display:"flex",gap:"20px"}}>
 
-                <div onClick={()=>dispatch(setStatus({status:"Approved",id:ele.id-1}))} style={{color:ele.status=="Approved"?"#00ff00":""}}>&#10004;</div>
-                <div onClick={()=>setShowModal(true)} style={{color:ele.status!="Approved"?"red":""}}>&#10006;</div>
+                <div onClick={()=>dispatch(setStatus({status:"Approved",id:ele.id-1}))} style={{color:(ele.status!="" && ele.status=="Approved")?"#00ff00":""}}>&#10004;</div>
+                <div onClick={()=>setShowModal(true)} style={{color:(ele.status!="" && ele.status!="Approved")?"red":""}}>&#10006;</div>
 
             </Element>
             <Element style={{width:"5%"}} onClick={()=>setShowEditModal(true)}>

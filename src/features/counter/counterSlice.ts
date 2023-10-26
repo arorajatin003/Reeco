@@ -31,10 +31,13 @@ export const counterSlice = createSlice({
       state[action.payload.id].price = action.payload.price;
       state[action.payload.id].quantity = action.payload.quantity;
     },
+    addProduct: (state, action) =>{
+      state.push(action.payload)
+    }
   },
 });
 
-export const { setStatus,editProduct } = counterSlice.actions;
+export const { setStatus,editProduct,addProduct } = counterSlice.actions;
 
 export const selectCount = (state: RootState) => state.counter;
 

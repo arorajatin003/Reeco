@@ -47,11 +47,17 @@ export const Element = styled.div`
 export const Image = styled.img`
     width: 100%;
     height: 100%;
-    object-fit: contain;
+    object-fit: cover;
 `
 export const ImageContainer = styled.div`
     width: 3rem;
     height: 3rem;
     padding: 0 0.15rem;
-    background-color: aqua;
+    /* background-color: aqua; */
+`
+export const TopContainer = styled.div`
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    margin-bottom: 2rem;
 `
